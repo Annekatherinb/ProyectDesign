@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>script.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+script.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">slider </span><span class="s2">= </span><span class="s1">document</span><span class="s2">.</span><span class="s1">querySelector</span><span class="s2">(</span><span class="s3">'.slider'</span><span class="s2">);</span>
+
+<span class="s0">function </span><span class="s1">activate</span><span class="s2">(</span><span class="s1">e</span><span class="s2">) {</span>
+    <span class="s0">const </span><span class="s1">items </span><span class="s2">= </span><span class="s1">document</span><span class="s2">.</span><span class="s1">querySelectorAll</span><span class="s2">(</span><span class="s3">'.item'</span><span class="s2">);</span>
+    <span class="s1">e</span><span class="s2">.</span><span class="s1">target</span><span class="s2">.</span><span class="s1">matches</span><span class="s2">(</span><span class="s3">'.next'</span><span class="s2">) &amp;&amp; </span><span class="s1">slider</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">items</span><span class="s2">[</span><span class="s4">0</span><span class="s2">])</span>
+    <span class="s1">e</span><span class="s2">.</span><span class="s1">target</span><span class="s2">.</span><span class="s1">matches</span><span class="s2">(</span><span class="s3">'.prev'</span><span class="s2">) &amp;&amp; </span><span class="s1">slider</span><span class="s2">.</span><span class="s1">prepend</span><span class="s2">(</span><span class="s1">items</span><span class="s2">[</span><span class="s1">items</span><span class="s2">.</span><span class="s1">length</span><span class="s2">-</span><span class="s4">1</span><span class="s2">]);</span>
+<span class="s2">}</span>
+
+<span class="s1">document</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s3">'click'</span><span class="s2">,</span><span class="s1">activate</span><span class="s2">,</span><span class="s0">false</span><span class="s2">);</span></pre>
+</body>
+</html>
