@@ -4,30 +4,44 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
-a {
-    text-decoration: none;
-    position: sticky;
-    top: 10px;
-    left: 10px;
-    background-color: #ffcd8c;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-a:hover {
-    background-color: #ffe345;
-}
 
 .links {
     list-style: none;
-    margin: 0;
     padding: 0;
     position: sticky;
-    top: 10px; left: 500px;
+    top: 10px; left: 1000px;
+}
+
+.sidebar-image {
+    position: fixed; /* Asegura que el sidebar permanezca fijo */
+    top: 0; /* Alinea el sidebar con la parte superior */
+    left: 0; /* Alinea el sidebar con la parte izquierda */
+    padding: 10px 50px; /* Espaciado interno */
+    height: 90px;
+
+}
+.bus-image{
+    position: fixed; /* Asegura que el sidebar permanezca fijo */
+    top: 25px; /* Alinea el sidebar con la parte superior */
+    left: 230px; /* Alinea el sidebar con la parte izquierda */
+    padding: 10px 50px; /* Espaciado interno */
+    height: 60px;
+}
+
+.separade{
+    position: fixed; /* Asegura que el sidebar permanezca fijo */
+    top: 15px; /* Alinea el sidebar con la parte superior */
+    left: 230px; /* Alinea el sidebar con la parte izquierda */
+    padding: 10px 50px; /* Espaciado interno */
+    height: 60px;
+}
+
+
+@media (max-width: 767px) {
+    .landing-page header .sidebar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 .container {
     padding-left: 15px;
@@ -57,7 +71,7 @@ a:hover {
 
 /* Start Landing Page */
 .landing-page header {
-    background-color: #ffebbe;
+    background-color: #2756ff;
     min-height: 80px;
     display: flex;
 }
@@ -79,31 +93,21 @@ a:hover {
         justify-content: center;
     }
 }
-.landing-page header .logo {
-    color: #5d5d5d;
-    font-style: italic;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-@media (max-width: 767px) {
-    .landing-page header .logo {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
+
 .landing-page header .links {
     display: flex;
     align-items: center;
+
 }
 @media (max-width: 767px) {
     .landing-page header .links {
-        text-align: center;
+        text-align: end;
         gap: 10px;
     }
 }
 .landing-page header .links li {
     margin-left: 30px;
-    color: #5d5d5d;
+    color: #ffffff;
     cursor: pointer;
     transition: .3s;
 }
